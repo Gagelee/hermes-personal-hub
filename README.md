@@ -10,6 +10,8 @@ This repository currently contains the initial design specification:
 
 - [Hermes Personal Hub Design](docs/specs/2026-04-17-hermes-personal-hub-design.md)
 
+The spec currently covers product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
+
 ## Design Direction
 
 Personal Hub is not meant to replace chat. Chat remains the conversational entrypoint. The Hub is the place where useful patterns become visible and reusable.
@@ -26,6 +28,23 @@ The design centers on:
 This project is designed to build on the official Hermes dashboard plugin system rather than replace it.
 
 The proposed architecture uses a durable **Personal Hub Host Plugin** as the runtime substrate. Most day-to-day growth happens through data updates, component instances, manifest patches, and layout policy. Full standalone dashboard plugins are reserved for durable, higher-effort functional modules.
+
+## Planned Repo Shape
+
+```text
+docs/
+  specs/
+  decisions/
+  diagrams/
+examples/
+  personal-hub/
+packages/
+  host-plugin/
+  schemas/
+  validator/
+```
+
+The next milestone is to add schemas and an example `examples/personal-hub/` state tree before implementing the Host Plugin.
 
 ## License
 

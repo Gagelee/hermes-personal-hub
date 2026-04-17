@@ -751,19 +751,312 @@ trustworthy by provenance
 alive through concrete growth signals
 ```
 
+## MVP Scope
+
+The MVP should prove that Personal Hub can grow through low-cost display generation before attempting full functional plugin generation.
+
+The first version should not try to build every Life OS surface. It should validate the core loop:
+
+```text
+agent observes activity -> writes data/component/manifest patch -> Host Plugin renders it -> user can inspect, hide, pin, or undo
+```
+
+### MVP Goals
+
+The MVP should demonstrate:
+
+- A Personal Hub Host Plugin can run inside the official Hermes dashboard plugin system.
+- The Hub can render component instances from YAML/JSON/Markdown files.
+- Agent-generated display growth can happen without writing new frontend code.
+- Every generated component has provenance, lifecycle, and `why_here`.
+- Users can pin, hide, archive, and inspect generated surfaces.
+- Growth Log makes automatic changes legible.
+- Basic validation prevents malformed or unsafe Hub state.
+
+### MVP Non-Goals
+
+The MVP should not include:
+
+- Automatic generation of standalone dashboard plugins.
+- External account integrations.
+- Sensitive data connectors.
+- Complex workflow execution.
+- A full visual design system.
+- Multi-user collaboration.
+- Marketplace or community component registry.
+- Advanced rollback engine beyond file-level change records.
+
+These are important later, but they would hide the central question: can the Hub grow cheaply and safely through policy-driven display surfaces?
+
+### MVP User Experience
+
+The first usable experience should have four stable views:
+
+1. **Home**
+   - Shows adaptive display components.
+   - Starts with recent work, digest surface, active worlds, and growth signals.
+
+2. **Worlds**
+   - Shows generated field pages such as Hermes UI, Finance, Fitness, Research, or Projects.
+   - Pages are created from `pages/*.yaml`.
+
+3. **Growth Log**
+   - Shows what the agent generated, updated, archived, or proposed.
+   - Every entry links to source, reason, affected files, and undo information.
+
+4. **Control**
+   - Shows pinned items, hidden items, policy settings, and safety status.
+   - Lets the user tune automatic growth comfort.
+
+### MVP Component Set
+
+The first component set should be intentionally small:
+
+- `markdown_panel`
+- `entity_card`
+- `timeline`
+- `link_board`
+- `metric_card`
+- `status_strip`
+- `table_view`
+- `diff_summary`
+- `growth_signal`
+- `prompt_runner_stub`
+
+`prompt_runner_stub` is intentionally a stub in MVP. It can display an intended prompt/workflow and a disabled or logged action path, but should not execute arbitrary tasks until the permission model is designed.
+
+### MVP Data Sources
+
+Initial data sources should be file-based:
+
+- Manually or agent-generated markdown digests.
+- JSON summaries.
+- YAML component instances.
+- Static sample session clusters.
+- Static skill summaries.
+- Static automation summaries.
+
+The MVP may include importer scripts later, but the first runtime should be able to render from checked-in sample data. This makes the project easy to demo and safe to open source.
+
+### MVP Example Worlds
+
+The first three example worlds should be:
+
+1. **Hermes Personal Hub**
+   - This project itself becomes the first active world.
+   - Demonstrates Felt Growth from concept to spec to runtime.
+
+2. **Digest Center**
+   - Demonstrates low-cost display growth from recurring digest files.
+   - Shows markdown panels, timelines, and link boards.
+
+3. **Skill Studio Light**
+   - Demonstrates skills becoming usable surfaces.
+   - Shows skill cards, linked docs, and prompt runner stubs.
+
+These examples avoid sensitive domains and make the open-source repo easier to evaluate.
+
+## Runtime Architecture
+
+Personal Hub should be a file-backed Host Plugin running inside the official Hermes dashboard plugin system.
+
+### Layers
+
+```text
+Hermes Dashboard
+  -> dashboard plugin loader
+    -> Personal Hub Host Plugin
+      -> manifest reader
+      -> schema validator
+      -> component renderer
+      -> growth log viewer
+      -> control surface
+      -> optional plugin API
+
+Hermes Agent / Codex / Claude
+  -> reads HUB.md / LAYOUT_POLICY.md / VISUAL_POLICY.md
+  -> observes sessions, skills, cron, files, memory
+  -> writes data, component instances, page manifests, change records
+  -> validates before applying
+```
+
+### Host Plugin Responsibilities
+
+The Host Plugin should:
+
+- Discover the Hub directory.
+- Load `hub.manifest.yaml`.
+- Load pages from `pages/*.yaml`.
+- Load component instances from `components/*.yaml`.
+- Load data from `data/`.
+- Validate references and schema versions.
+- Render known component types.
+- Show provenance and lifecycle metadata.
+- Provide pin, hide, archive, and inspect controls.
+- Render Growth Log from `changes/*.json`.
+- Refuse unsafe or malformed state.
+
+The Host Plugin should not:
+
+- Decide what the user's Life OS should contain.
+- Generate new components by itself.
+- Make external calls without explicit integration.
+- Execute arbitrary prompts or commands in MVP.
+- Silently repair policy violations.
+
+### Agent Writer Responsibilities
+
+The agent writes Hub state. It should:
+
+- Read `HUB.md`, `LAYOUT_POLICY.md`, `VISUAL_POLICY.md`, and schemas.
+- Classify candidate growth.
+- Prefer Display Growth when possible.
+- Generate minimal patches.
+- Write data files before component instances.
+- Write component instances before manifest placement.
+- Write change records for every automatic update.
+- Validate before declaring success.
+
+### Validator Responsibilities
+
+Validation should run both in agent workflow and Host Plugin runtime.
+
+Validator checks:
+
+- YAML and JSON parse.
+- Required fields exist.
+- Component IDs are unique.
+- Component types are registered.
+- Referenced files exist.
+- Status values are legal.
+- TTL is present for ephemeral components.
+- Promotion criteria exist for experimental components.
+- Protected/pinned rules are not violated.
+- Permissions are declared.
+- No absolute local paths are exposed in public/demo mode.
+
+MVP can start with a lightweight script or library, but the contract should be strict enough that generated UI cannot become arbitrary unreviewed code.
+
+### Renderer Responsibilities
+
+The renderer maps component instances to approved React components.
+
+Example:
+
+```yaml
+id: recent-project-snapshot
+type: entity_card
+title: Hermes Personal Hub
+data:
+  file: data/projects/hermes-personal-hub.json
+visual:
+  emphasis: primary
+  density: normal
+```
+
+The renderer should not execute code from component YAML. It should interpret declarative data only.
+
+### Data Flow
+
+```text
+1. Agent observes source activity.
+2. Agent generates or updates data file.
+3. Agent creates/updates component YAML.
+4. Agent patches page or hub manifest.
+5. Agent writes change record.
+6. Validator checks the full resulting state.
+7. Host Plugin reloads or refreshes.
+8. User sees component with provenance and controls.
+9. User pin/hide/archive actions update local Hub state.
+10. Future agent generation learns from those actions.
+```
+
+### Storage Location
+
+For a real Hermes installation, the default storage should be:
+
+```text
+~/.hermes/personal-hub/
+```
+
+For this open-source repo, sample/demo state should live under:
+
+```text
+examples/personal-hub/
+```
+
+This separation prevents public demo data from being confused with a user's private Hub.
+
+### API Shape
+
+The Host Plugin API can be small:
+
+```text
+GET  /api/plugins/personal-hub/state
+GET  /api/plugins/personal-hub/component/{id}
+POST /api/plugins/personal-hub/actions/pin
+POST /api/plugins/personal-hub/actions/hide
+POST /api/plugins/personal-hub/actions/archive
+GET  /api/plugins/personal-hub/growth-log
+POST /api/plugins/personal-hub/validate
+```
+
+MVP can load static files directly in demo mode, but a real Hermes plugin should expose API routes so state can be validated and mutated safely.
+
+### Security Boundary
+
+The Host Plugin must treat Hub files as untrusted generated content.
+
+Rules:
+
+- Do not execute generated JavaScript.
+- Do not inject raw HTML from generated files.
+- Render Markdown through a sanitizer.
+- Restrict component types to a registry.
+- Restrict actions to known verbs.
+- Keep external integrations out of MVP.
+- Keep secret values out of manifests and sample data.
+- Require explicit confirmation for standalone plugin generation.
+
+### Open-Source Repo Shape
+
+The public repo should evolve toward:
+
+```text
+README.md
+LICENSE
+docs/
+  specs/
+  decisions/
+  diagrams/
+examples/
+  personal-hub/
+    HUB.md
+    LAYOUT_POLICY.md
+    VISUAL_POLICY.md
+    hub.manifest.yaml
+    components/
+    data/
+    pages/
+    changes/
+packages/
+  host-plugin/
+  schemas/
+  validator/
+```
+
+The MVP can start with docs and examples before adding `packages/`.
+
 ## Open Questions
 
 - Should Personal Hub initially live only in official Hermes dashboard, or also provide an adapter for the community Web UI?
-- What minimum schema is needed for MVP validation?
 - Where should Hub usage telemetry live?
 - How should rollback patches be stored and applied?
 - How much of Growth Log should be shown on the homepage versus Control surface?
-- What are the first 3 example worlds to build for validation?
+- Should `prompt_runner_stub` remain display-only in MVP, or support confirmed local actions?
 
 ## Next Sections To Draft
 
-- MVP scope.
-- Runtime architecture for Host Plugin.
 - Schema definitions.
 - Open-source component packaging model.
 - Testing and review strategy.

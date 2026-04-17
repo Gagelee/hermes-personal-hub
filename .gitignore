@@ -7,3 +7,4 @@ dist/
 build/
 __pycache__/
 *.pyc
+stitch_minimalist_bilingual_ui/
