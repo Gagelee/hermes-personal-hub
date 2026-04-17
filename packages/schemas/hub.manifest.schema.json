@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/hermes-personal-hub/hub.manifest.schema.json",
+  "title": "Personal Hub Manifest",
+  "type": "object",
+  "required": ["schema_version", "hub_id", "home", "pages", "control"],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": { "type": "integer" },
+    "hub_id": { "type": "string", "minLength": 1 },
+    "status": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "home": {
+      "type": "object",
+      "required": ["sections"],
+      "additionalProperties": true,
+      "properties": {
+        "layout_policy": { "type": "string" },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "components"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "label": { "type": "string", "minLength": 1 },
+              "mode": { "type": "string" },
+              "components": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "file", "status"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "file": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "control": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

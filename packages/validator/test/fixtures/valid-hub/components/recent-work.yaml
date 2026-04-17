@@ -1,0 +1,21 @@
+id: recent-work
+type: recent_work_snapshot
+status: adaptive
+title: Recent Work
+source:
+  kind: project_activity
+  refs:
+    - docs/specs/test.md
+data:
+  file: data/summaries/recent-work.json
+placement:
+  preferred_surface: home
+  semantic_zone: now
+  priority: 0.9
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: false
+explanation:
+  why_here: "This fixture verifies a valid component."
+  user_value: "Shows a valid component can be loaded."

@@ -36,6 +36,22 @@ This project is designed to build on the official Hermes dashboard plugin system
 
 The proposed architecture uses a durable **Personal Hub Host Plugin** as the runtime substrate. Most day-to-day growth happens through data updates, component instances, manifest patches, and layout policy. Full standalone dashboard plugins are reserved for durable, higher-effort functional modules.
 
+## Validation
+
+Run the validator tests:
+
+```bash
+npm test
+```
+
+Validate the ignored private working Hub:
+
+```bash
+npm run validate:private
+```
+
+Public demo Hubs should pass the same validator before commit.
+
 ## Planned Repo Shape
 
 ```text

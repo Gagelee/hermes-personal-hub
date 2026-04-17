@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/hermes-personal-hub/change.schema.json",
+  "title": "Personal Hub Change Record",
+  "type": "object",
+  "required": ["id", "trigger", "reason", "risk_level", "changes", "growth_log"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "trigger": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string", "minLength": 1 },
+    "risk_level": { "type": "integer", "minimum": 0 },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action", "summary"],
+        "additionalProperties": true,
+        "properties": {
+          "path": { "type": "string" },
+          "file": { "type": "string" },
+          "action": { "type": "string", "minLength": 1 },
+          "summary": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "public_commit": { "type": "boolean" },
+    "growth_log": { "type": "boolean" }
+  }
+}

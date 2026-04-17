@@ -1,0 +1,23 @@
+schema_version: 1
+hub_id: valid-hub
+status: demo
+updated_at: "2026-04-18T00:00:00+08:00"
+
+home:
+  layout_policy: test
+  sections:
+    - id: now
+      label: Now
+      mode: adaptive
+      components:
+        - recent-work
+
+pages:
+  - id: hermes
+    title: Hermes
+    file: pages/hermes.yaml
+    status: adaptive
+
+control:
+  growth_log_enabled: true
+  undo_enabled: true

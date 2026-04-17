@@ -66,6 +66,19 @@ When creating a public demo:
 4. Export or hand-create sanitized snapshots into `examples/personal-hub/`.
 5. Run leakage checks before committing public examples.
 
+## Validation
+
+Private and public Hubs should pass the same structural validator.
+
+Use:
+
+```bash
+npm test
+npm run validate:private
+```
+
+The validator checks manifest shape, page/component/change schemas, local component references, page references, and component data file references. Passing validation does not mean public data is sanitized; leakage review is still required before committing public examples.
+
 ## Leakage Checks
 
 Before committing any example data, scan for:

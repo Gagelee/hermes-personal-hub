@@ -1,0 +1,11 @@
+id: hermes
+title: Hermes
+status: adaptive
+semantic_zone: worlds
+summary: "Schema-invalid fixture."
+components:
+  - broken
+data_sources:
+  - data/summaries/recent-work.json
+auto_layout:
+  allowed: true
