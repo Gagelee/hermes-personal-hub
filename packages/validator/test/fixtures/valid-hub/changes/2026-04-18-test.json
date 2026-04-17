@@ -1,0 +1,15 @@
+{
+  "id": "2026-04-18-test",
+  "trigger": "test",
+  "reason": "Fixture change.",
+  "risk_level": 1,
+  "changes": [
+    {
+      "path": "hub.manifest.yaml",
+      "action": "created",
+      "summary": "Created test fixture."
+    }
+  ],
+  "public_commit": true,
+  "growth_log": true
+}

@@ -1,0 +1,12 @@
+id: hermes
+title: Hermes
+status: adaptive
+semantic_zone: worlds
+summary: "Test page."
+components:
+  - recent-work
+data_sources:
+  - data/summaries/recent-work.json
+auto_layout:
+  allowed: true
+  protect_pinned: true

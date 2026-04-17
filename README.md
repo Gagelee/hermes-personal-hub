@@ -42,6 +42,22 @@ Hermes Personal Hub is currently iterating as an independent repository. It shou
 
 See [Decision 0001](docs/decisions/0001-independent-iteration-before-hermes-integration.md).
 
+## Validation
+
+Run the validator tests:
+
+```bash
+npm test
+```
+
+Validate the ignored private working Hub:
+
+```bash
+npm run validate:private
+```
+
+Public demo Hubs should pass the same validator before commit.
+
 ## Planned Repo Shape
 
 ```text

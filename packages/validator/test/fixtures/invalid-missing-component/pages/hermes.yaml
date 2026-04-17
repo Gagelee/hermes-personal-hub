@@ -1,0 +1,10 @@
+id: hermes
+title: Hermes
+status: adaptive
+semantic_zone: worlds
+summary: "Invalid page."
+components:
+  - missing-card
+data_sources: []
+auto_layout:
+  allowed: true

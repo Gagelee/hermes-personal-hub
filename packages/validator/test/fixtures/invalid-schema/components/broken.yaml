@@ -1,0 +1,13 @@
+id: broken
+status: adaptive
+title: Broken Component
+source:
+  kind: test
+data:
+  file: data/summaries/recent-work.json
+placement:
+  preferred_surface: home
+  semantic_zone: now
+explanation:
+  why_here: "This fixture is missing the required component type."
+  user_value: "Verifies schema errors include file paths."
