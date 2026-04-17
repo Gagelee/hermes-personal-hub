@@ -12,6 +12,8 @@ This repository currently contains the initial design specification:
 - [Visual Reference Notes](docs/design/visual-reference-notes.md)
 - [Visual Policy](docs/design/VISUAL_POLICY.md)
 - [Machine-Readable Visual Policy](docs/design/visual.policy.yaml)
+- [Private/Public Hub Boundary](docs/design/private-vs-public-hub.md)
+- [Public Demo Export Design](docs/design/public-demo-export.md)
 - [Example CSS Theme Entry](examples/personal-hub/theme.css)
 - [Example CSS Tokens](examples/personal-hub/tokens.css)
 - [Example CSS Primitives](examples/personal-hub/primitives.css)
