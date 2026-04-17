@@ -1,0 +1,21 @@
+@import "./tokens.css";
+@import "./primitives.css";
+
+body {
+  margin: 0;
+  background: var(--hph-color-canvas);
+  color: var(--hph-color-text);
+  font-family: var(--hph-font-human);
+}
+
+a {
+  color: var(--hph-color-blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--hph-font-technical);
+}

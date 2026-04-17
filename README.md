@@ -9,6 +9,12 @@ The core idea: if an agent can learn from a user over time, its interface should
 This repository currently contains the initial design specification:
 
 - [Hermes Personal Hub Design](docs/specs/2026-04-17-hermes-personal-hub-design.md)
+- [Visual Reference Notes](docs/design/visual-reference-notes.md)
+- [Visual Policy](docs/design/VISUAL_POLICY.md)
+- [Machine-Readable Visual Policy](docs/design/visual.policy.yaml)
+- [Example CSS Theme Entry](examples/personal-hub/theme.css)
+- [Example CSS Tokens](examples/personal-hub/tokens.css)
+- [Example CSS Primitives](examples/personal-hub/primitives.css)
 
 The spec currently covers product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
 
@@ -22,6 +28,7 @@ The design centers on:
 - **Interaction Upgrade**: repeated language-only workflows can become forms, dashboards, trackers, prompt runners, review flows, and small personal tools.
 - **Policy over Framework**: layout governance should be an agent-readable policy, not a rigid frontend template.
 - **Automatic First, Reversible Always**: low-risk display growth can happen automatically, while every change remains auditable and reversible.
+- **Reusable Visual Primitives**: generated UI should reuse open-source-safe tokens and primitives instead of copying private reference assets or inventing one-off styles.
 
 ## Relationship To Hermes
 
@@ -38,6 +45,9 @@ docs/
   diagrams/
 examples/
   personal-hub/
+    theme.css
+    tokens.css
+    primitives.css
 packages/
   host-plugin/
   schemas/

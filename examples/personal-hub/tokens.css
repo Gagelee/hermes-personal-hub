@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+
+  --hph-color-canvas: #f7f8f4;
+  --hph-color-surface: #ffffff;
+  --hph-color-surface-muted: #eef1ec;
+  --hph-color-surface-raised: #fbfcf8;
+  --hph-color-text: #111713;
+  --hph-color-text-muted: #5e675f;
+  --hph-color-text-faint: #818a82;
+  --hph-color-rule: #c9d0c8;
+  --hph-color-rule-strong: #79837a;
+
+  --hph-color-blue: #1e5eff;
+  --hph-color-green: #178a52;
+  --hph-color-orange: #c66a00;
+  --hph-color-red: #c1262e;
+
+  --hph-font-human: "Space Grotesk", "Inter", "Noto Sans SC", system-ui, sans-serif;
+  --hph-font-technical: "JetBrains Mono", "SFMono-Regular", "Cascadia Mono", Menlo, monospace;
+
+  --hph-text-xs: 0.75rem;
+  --hph-text-sm: 0.875rem;
+  --hph-text-md: 1rem;
+  --hph-text-lg: 1.25rem;
+  --hph-text-xl: 1.75rem;
+  --hph-text-display: 2.25rem;
+
+  --hph-line-tight: 1.1;
+  --hph-line-normal: 1.5;
+  --hph-line-loose: 1.7;
+
+  --hph-space-1: 0.25rem;
+  --hph-space-2: 0.5rem;
+  --hph-space-3: 0.75rem;
+  --hph-space-4: 1rem;
+  --hph-space-5: 1.5rem;
+  --hph-space-6: 2rem;
+  --hph-space-7: 3rem;
+  --hph-space-8: 4rem;
+
+  --hph-radius-none: 0;
+  --hph-radius-minimal: 4px;
+  --hph-radius-control: 6px;
+
+  --hph-border-thin: 1px solid var(--hph-color-rule);
+  --hph-border-strong: 1px solid var(--hph-color-rule-strong);
+
+  --hph-grid-min: 16rem;
+  --hph-grid-gap: var(--hph-space-4);
+  --hph-surface-padding: var(--hph-space-5);
+
+  --hph-focus-ring: 0 0 0 2px var(--hph-color-canvas), 0 0 0 4px var(--hph-color-blue);
+}

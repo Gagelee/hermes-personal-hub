@@ -1,0 +1,162 @@
+schema_version: 1
+policy_id: hermes-personal-hub-visual-policy
+status: draft
+
+north_star:
+  phrase: "Tactical precision meets minimalist editorial Life OS."
+  default_theme: light
+  posture:
+    - precise
+    - calm
+    - auditable
+    - personal
+
+color:
+  foundation:
+    default: light
+    canvas: "#f7f8f4"
+    surface: "#ffffff"
+    surface_muted: "#eef1ec"
+    text: "#111713"
+    text_muted: "#5e675f"
+    rule: "#c9d0c8"
+  accents:
+    blue:
+      role: primary_action_or_active_focus
+      value: "#1e5eff"
+    green:
+      role: verified_success_or_healthy_state
+      value: "#178a52"
+    orange:
+      role: caution_monitoring_or_pending_review
+      value: "#c66a00"
+    red:
+      role: destructive_sensitive_or_blocked_state
+      value: "#c1262e"
+  constraints:
+    accent_use: semantic_only
+    avoid_dominant_palettes:
+      - purple_gradient
+      - purple_blue_gradient
+      - beige_cream_sand
+      - dark_blue_slate
+      - brown_orange_espresso
+    disallow:
+      - decorative_bokeh
+      - decorative_orbs
+      - large_glossy_gradients
+
+geometry:
+  radius:
+    default_px: 0
+    maximum_general_px: 4
+    maximum_exception_px: 8
+    exception_requires_reason: true
+  borders:
+    preferred_width_px: 1
+    style: solid
+  shadows:
+    default: none
+    allow_subtle_tonal_depth: true
+  markers:
+    allow:
+      - edge_marker
+      - corner_bracket
+      - technical_stamp
+      - provenance_chip
+      - diff_marker
+  disallow:
+    - cards_inside_cards
+    - heavy_drop_shadows
+    - soft_consumer_card_stacks
+
+typography:
+  mode: technical_editorial
+  roles:
+    human:
+      family_token: "--hph-font-human"
+      usage:
+        - heading
+        - body
+        - navigation
+    technical:
+      family_token: "--hph-font-technical"
+      usage:
+        - status
+        - timestamp
+        - id
+        - metric
+        - command
+        - label
+  constraints:
+    negative_letter_spacing: false
+    viewport_scaled_font_size: false
+    text_must_fit_container: true
+
+bilingual:
+  enabled: true
+  pattern: paired_label
+  constraints:
+    chinese_not_afterthought: true
+    preserve_baseline_alignment: true
+    keep_pairs_short: true
+
+components:
+  required_generated_slots:
+    - title
+    - source_or_provenance
+    - lifecycle_or_status
+  recommended_primitives:
+    - display_surface
+    - status_strip
+    - technical_stamp
+    - provenance_chip
+    - edge_marker
+    - corner_bracket
+    - growth_marker
+    - bilingual_label
+    - rectangular_button
+    - table_shell
+  statuses:
+    protected:
+      visual_requirement: stable_control_affordance
+    adaptive:
+      visual_requirement: why_here_or_source_marker
+    experimental:
+      visual_requirement: visible_experimental_stamp
+    ephemeral:
+      visual_requirement: visible_expiry_or_time_context
+
+generated_ui:
+  display_growth:
+    raw_html: disallowed
+    generated_css: disallowed_by_default
+    use_existing_primitives_first: true
+    source_required: true
+    lifecycle_required: true
+    permanent_navigation_for_ephemeral: disallowed
+  functional_growth:
+    experimental_status_required_until_promoted: true
+    permission_surface_required: true
+    stable_controls_required: true
+    silent_workflow_replacement: disallowed
+
+assets:
+  local_reference_assets:
+    public_commit: disallowed
+    role: inspiration_only
+  public_assets_must_be:
+    - open_source_safe
+    - free_of_private_paths
+    - free_of_credentials
+    - documented
+
+validation:
+  recommended_checks:
+    - no_raw_html_for_display_growth
+    - source_slot_present
+    - status_marker_present
+    - radius_within_limit
+    - accent_is_semantic
+    - no_forbidden_palette
+    - no_private_reference_asset
