@@ -1,0 +1,20 @@
+id: demo-fitness-snapshot
+type: status_strip
+status: adaptive
+title: Fitness Snapshot
+source:
+  kind: synthetic_metric_summary
+  ref: data/metrics/demo-fitness-weekly.json
+data:
+  file: data/metrics/demo-fitness-weekly.json
+placement:
+  preferred_surface: home
+  semantic_zone: worlds
+  priority: 0.7
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: true
+explanation:
+  why_here: "Fitness is a recurring Life OS world that can be represented with synthetic trend data in public demos."
+  user_value: "Shows training progress patterns without exposing health-sensitive raw metrics."

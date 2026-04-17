@@ -1,0 +1,6 @@
+{
+  "world": "Hermes Personal Hub",
+  "status": "active",
+  "growth_signal": "The project now has product architecture, visual policy, schemas, validation, and a public-safe demo snapshot.",
+  "next_candidate": "Static renderer for the demo Life OS home."
+}

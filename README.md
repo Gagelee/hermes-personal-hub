@@ -17,8 +17,11 @@ This repository currently contains the initial design specification:
 - [Example CSS Theme Entry](examples/personal-hub/theme.css)
 - [Example CSS Tokens](examples/personal-hub/tokens.css)
 - [Example CSS Primitives](examples/personal-hub/primitives.css)
+- [Public Demo Hub Manifest](examples/personal-hub/hub.manifest.yaml)
 
 The spec currently covers product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
+
+The repository also includes a sanitized public demo Hub under `examples/personal-hub/`.
 
 ## Design Direction
 
@@ -67,6 +70,11 @@ docs/
   diagrams/
 examples/
   personal-hub/
+    hub.manifest.yaml
+    pages/
+    components/
+    data/
+    changes/
     theme.css
     tokens.css
     primitives.css

@@ -1,0 +1,15 @@
+id: hermes-personal-hub
+title: Hermes Personal Hub
+status: adaptive
+semantic_zone: worlds
+summary: "Public project world for a growing Life OS layer on top of Hermes Agent."
+components:
+  - demo-recent-work
+  - demo-hermes-growth
+  - demo-agent-growth-log
+data_sources:
+  - data/summaries/demo-hermes-project.json
+  - data/summaries/demo-recent-work.json
+auto_layout:
+  allowed: true
+  protect_pinned: true

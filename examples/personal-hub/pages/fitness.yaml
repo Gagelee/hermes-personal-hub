@@ -1,0 +1,12 @@
+id: fitness
+title: Fitness
+status: adaptive
+semantic_zone: worlds
+summary: "Synthetic fitness world showing how training progress could become a lightweight display surface."
+components:
+  - demo-fitness-snapshot
+data_sources:
+  - data/metrics/demo-fitness-weekly.json
+auto_layout:
+  allowed: true
+  protect_pinned: true

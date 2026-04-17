@@ -1,0 +1,19 @@
+id: demo-weekly-digest
+type: markdown_digest
+status: ephemeral
+title: Weekly Digest
+source:
+  kind: demo_digest
+  ref: data/digests/demo-weekly-digest.md
+data:
+  file: data/digests/demo-weekly-digest.md
+placement:
+  preferred_surface: home
+  semantic_zone: now
+  priority: 0.72
+lifecycle:
+  expires_at: "2026-04-25T00:00:00+08:00"
+  on_expire: archive
+explanation:
+  why_here: "This fictional digest demonstrates how recurring outputs become visible Hub surfaces."
+  user_value: "Turns background summaries into a continuation point."

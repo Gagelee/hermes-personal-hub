@@ -1,0 +1,15 @@
+{
+  "id": "2026-04-18-demo-snapshot-created",
+  "trigger": "manual_demo_export",
+  "reason": "Create a public-safe Hub snapshot from the private working Hub shape.",
+  "risk_level": 1,
+  "changes": [
+    {
+      "path": "examples/personal-hub",
+      "action": "created",
+      "summary": "Added sanitized demo Hub state tree."
+    }
+  ],
+  "public_commit": true,
+  "growth_log": true
+}

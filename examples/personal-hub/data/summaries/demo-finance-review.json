@@ -1,0 +1,16 @@
+{
+  "world": "Finance",
+  "status": "protected_candidate",
+  "summary": "A fictional review workflow that demonstrates protected status, checklist promotion, and confirmation boundaries.",
+  "assets": [
+    {
+      "symbol": "DEMO-A",
+      "role": "core_watch_item"
+    },
+    {
+      "symbol": "DEMO-B",
+      "role": "risk_review_item"
+    }
+  ],
+  "public_export": "This file contains fictional symbols and no real financial exposure."
+}

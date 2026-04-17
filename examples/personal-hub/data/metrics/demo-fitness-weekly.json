@@ -1,0 +1,19 @@
+{
+  "world": "Fitness",
+  "status": "synthetic_summary",
+  "metrics": [
+    {
+      "label": "training_consistency",
+      "value": "steady"
+    },
+    {
+      "label": "review_surface",
+      "value": "candidate"
+    },
+    {
+      "label": "trend",
+      "value": "synthetic"
+    }
+  ],
+  "public_export": "This file uses synthetic trend labels instead of raw health-sensitive metrics."
+}

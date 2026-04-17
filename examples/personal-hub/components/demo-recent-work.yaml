@@ -1,0 +1,22 @@
+id: demo-recent-work
+type: recent_work_snapshot
+status: adaptive
+title: Recent Work
+source:
+  kind: public_repo_activity
+  refs:
+    - docs/specs/2026-04-17-hermes-personal-hub-design.md
+    - docs/design/public-demo-export.md
+data:
+  file: data/summaries/demo-recent-work.json
+placement:
+  preferred_surface: home
+  semantic_zone: now
+  priority: 0.95
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: false
+explanation:
+  why_here: "The public project recently gained a validator and a public demo export design."
+  user_value: "Shows active project progress without exposing private working state."

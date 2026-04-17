@@ -1,0 +1,12 @@
+id: finance
+title: Finance
+status: protected
+semantic_zone: worlds
+summary: "Fictional finance review workflow candidate with explicit protection boundaries."
+components:
+  - demo-finance-review-candidate
+data_sources:
+  - data/summaries/demo-finance-review.json
+auto_layout:
+  allowed: false
+  reason: "Finance review workflows should not be structurally changed without explicit review."

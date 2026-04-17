@@ -1,0 +1,14 @@
+{
+  "world": "Digest / Automations",
+  "status": "active",
+  "items": [
+    {
+      "name": "Demo weekly digest",
+      "state": "display_growth_source"
+    },
+    {
+      "name": "Demo automation status",
+      "state": "status_strip_candidate"
+    }
+  ]
+}

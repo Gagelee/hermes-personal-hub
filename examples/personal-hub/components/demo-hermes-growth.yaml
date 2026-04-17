@@ -1,0 +1,22 @@
+id: demo-hermes-growth
+type: growth_signal
+status: adaptive
+title: Hermes Personal Hub Is Becoming Concrete
+source:
+  kind: public_project_summary
+  refs:
+    - docs/design/VISUAL_POLICY.md
+    - packages/schemas
+data:
+  file: data/summaries/demo-hermes-project.json
+placement:
+  preferred_surface: home
+  semantic_zone: worlds
+  priority: 0.9
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: true
+explanation:
+  why_here: "The project moved from design thesis into schemas, validation, and demo-safe state."
+  user_value: "Makes project growth visible as a Life OS world."

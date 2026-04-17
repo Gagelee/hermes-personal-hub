@@ -1,0 +1,20 @@
+id: demo-automation-watch
+type: automation_monitor
+status: adaptive
+title: Automation Watch
+source:
+  kind: representative_automation_summary
+  ref: data/summaries/demo-automation-watch.json
+data:
+  file: data/summaries/demo-automation-watch.json
+placement:
+  preferred_surface: home
+  semantic_zone: capabilities
+  priority: 0.66
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: false
+explanation:
+  why_here: "Digest and scheduled outputs are natural Display Growth inputs."
+  user_value: "Shows background work without exposing private automation logs."

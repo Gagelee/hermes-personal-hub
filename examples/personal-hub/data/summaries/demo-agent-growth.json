@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "date": "2026-04-18",
+      "label": "Visual policy and CSS primitives added",
+      "type": "design_growth"
+    },
+    {
+      "date": "2026-04-18",
+      "label": "Schema validator added",
+      "type": "contract_growth"
+    },
+    {
+      "date": "2026-04-18",
+      "label": "Public demo snapshot created",
+      "type": "demo_growth"
+    }
+  ]
+}

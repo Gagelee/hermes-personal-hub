@@ -1,0 +1,20 @@
+{
+  "title": "Recent Work",
+  "items": [
+    {
+      "label": "Schema validator merged",
+      "status": "complete",
+      "source": "public repository"
+    },
+    {
+      "label": "Public demo export design documented",
+      "status": "complete",
+      "source": "docs/design/public-demo-export.md"
+    },
+    {
+      "label": "Sanitized demo snapshot created",
+      "status": "active",
+      "source": "examples/personal-hub"
+    }
+  ]
+}

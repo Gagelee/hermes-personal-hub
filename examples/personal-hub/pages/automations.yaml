@@ -1,0 +1,14 @@
+id: automations
+title: Digest / Automations
+status: adaptive
+semantic_zone: capabilities
+summary: "Representative digest and automation outputs that can become low-cost display growth."
+components:
+  - demo-weekly-digest
+  - demo-automation-watch
+data_sources:
+  - data/digests/demo-weekly-digest.md
+  - data/summaries/demo-automation-watch.json
+auto_layout:
+  allowed: true
+  protect_pinned: true

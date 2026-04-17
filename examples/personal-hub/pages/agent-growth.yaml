@@ -1,0 +1,13 @@
+id: agent-growth
+title: Agent Growth
+status: adaptive
+semantic_zone: growth
+summary: "Public milestones showing policies, schemas, validator work, and demo snapshot progress."
+components:
+  - demo-agent-growth-log
+  - demo-hermes-growth
+data_sources:
+  - data/summaries/demo-agent-growth.json
+auto_layout:
+  allowed: true
+  protect_pinned: true

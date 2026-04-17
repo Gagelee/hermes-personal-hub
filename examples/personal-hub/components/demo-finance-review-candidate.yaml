@@ -1,0 +1,28 @@
+id: demo-finance-review-candidate
+type: project_cockpit_light
+status: candidate
+title: Finance Review Candidate
+source:
+  kind: fictional_workflow_summary
+  ref: data/summaries/demo-finance-review.json
+data:
+  file: data/summaries/demo-finance-review.json
+placement:
+  preferred_surface: home
+  semantic_zone: worlds
+  priority: 0.68
+adaptation:
+  movable: false
+  collapsible: true
+  promotable: true
+promotion:
+  eligible: true
+  current_level: 1
+  suggested_next_level: 2
+  reasons:
+    - "A repeated review workflow is easier to demonstrate as a protected candidate than as a live integration."
+  blockers:
+    - "Real holdings, account details, and transaction data must never appear in public examples."
+explanation:
+  why_here: "Finance is useful for demonstrating protected workflow boundaries."
+  user_value: "Shows Interaction Upgrade without implying real financial advice or live account access."

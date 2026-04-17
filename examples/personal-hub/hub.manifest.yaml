@@ -1,0 +1,54 @@
+schema_version: 1
+hub_id: public-demo-hub
+status: demo
+updated_at: "2026-04-18T00:00:00+08:00"
+
+home:
+  layout_policy: life_os_adaptive_demo
+  sections:
+    - id: now
+      label: Now
+      mode: adaptive
+      components:
+        - demo-recent-work
+        - demo-weekly-digest
+    - id: worlds
+      label: Worlds
+      mode: adaptive
+      components:
+        - demo-hermes-growth
+        - demo-fitness-snapshot
+        - demo-finance-review-candidate
+    - id: operations
+      label: Operations
+      mode: adaptive
+      components:
+        - demo-automation-watch
+        - demo-agent-growth-log
+
+pages:
+  - id: hermes-personal-hub
+    title: Hermes Personal Hub
+    file: pages/hermes-personal-hub.yaml
+    status: adaptive
+  - id: fitness
+    title: Fitness
+    file: pages/fitness.yaml
+    status: adaptive
+  - id: finance
+    title: Finance
+    file: pages/finance.yaml
+    status: protected
+  - id: automations
+    title: Digest / Automations
+    file: pages/automations.yaml
+    status: adaptive
+  - id: agent-growth
+    title: Agent Growth
+    file: pages/agent-growth.yaml
+    status: adaptive
+
+control:
+  growth_log_enabled: true
+  undo_enabled: true
+  public_export_requires_review: true

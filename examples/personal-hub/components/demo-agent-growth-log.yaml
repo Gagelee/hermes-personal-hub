@@ -1,0 +1,20 @@
+id: demo-agent-growth-log
+type: timeline
+status: adaptive
+title: Agent Growth Log
+source:
+  kind: public_change_records
+  ref: data/summaries/demo-agent-growth.json
+data:
+  file: data/summaries/demo-agent-growth.json
+placement:
+  preferred_surface: home
+  semantic_zone: growth
+  priority: 0.62
+adaptation:
+  movable: true
+  collapsible: true
+  promotable: false
+explanation:
+  why_here: "The Hub should show how policies, schemas, and generated UI behavior are stabilizing."
+  user_value: "Makes system growth auditable instead of invisible."
