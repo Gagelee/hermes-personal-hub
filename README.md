@@ -36,6 +36,10 @@ This project is designed to build on the official Hermes dashboard plugin system
 
 The proposed architecture uses a durable **Personal Hub Host Plugin** as the runtime substrate. Most day-to-day growth happens through data updates, component instances, manifest patches, and layout policy. Full standalone dashboard plugins are reserved for durable, higher-effort functional modules.
 
+Hermes Personal Hub is currently iterating as an independent repository. It should not be installed into or connected to a deployed Hermes environment until its schemas, validator, private/public data boundary, demo snapshot, renderer, and Host Plugin skeleton are stable enough to integrate safely.
+
+See [Decision 0001](docs/decisions/0001-independent-iteration-before-hermes-integration.md).
+
 ## Planned Repo Shape
 
 ```text
