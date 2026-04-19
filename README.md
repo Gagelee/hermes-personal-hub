@@ -10,6 +10,7 @@ This repository currently contains the initial design specification:
 
 - [Hermes Personal Hub Design](docs/specs/2026-04-17-hermes-personal-hub-design.md)
 - [Growth Protocol](docs/specs/2026-04-19-growth-protocol.md)
+- [Core Runtime Roadmap](docs/specs/2026-04-19-core-runtime-roadmap.md)
 - [Visual Reference Notes](docs/design/visual-reference-notes.md)
 - [Visual Policy](docs/design/VISUAL_POLICY.md)
 - [Machine-Readable Visual Policy](docs/design/visual.policy.yaml)
@@ -22,7 +23,7 @@ This repository currently contains the initial design specification:
 - [Static Public Demo](examples/personal-hub/index.html)
 - [Demo Growth Signal](examples/personal-hub/growth/demo-growth-protocol-signal.yaml)
 
-The specs currently cover product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, growth protocol, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
+The specs currently cover product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, growth protocol, core runtime roadmap, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
 
 The repository also includes a sanitized public demo Hub under `examples/personal-hub/`.
 
@@ -70,6 +71,12 @@ Render the static public demo:
 npm run render:demo
 ```
 
+Preview a demo layout patch without writing files:
+
+```bash
+npm run dry-run:demo
+```
+
 ## Planned Repo Shape
 
 ```text
@@ -89,11 +96,12 @@ examples/
     primitives.css
 packages/
   host-plugin/
+  patch-engine/
   schemas/
   validator/
 ```
 
-The next milestone is to add schemas and an example `examples/personal-hub/` state tree before implementing the Host Plugin.
+The next milestone is Undo Engine v0 for reversing low-risk applied patches before proposal review, Host Runtime work, or renewed UI composition.
 
 ## License
 
