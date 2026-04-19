@@ -69,6 +69,10 @@ export async function loadHub(hubRoot) {
     pages: await readDocuments(root, "pages", ".yaml", readYaml),
     components: await readDocuments(root, "components", ".yaml", readYaml),
     changes: await readDocuments(root, "changes", ".json", readJson),
+    growthSignals: await readDocuments(root, "growth", ".yaml", readYaml),
+    proposals: await readDocuments(root, "proposals", ".yaml", readYaml),
+    patches: await readDocuments(root, "patches", ".yaml", readYaml),
+    undoRecords: await readDocuments(root, "undo", ".json", readJson),
     pathExists: (relativePath) => pathExists(path.join(root, relativePath))
   };
 }

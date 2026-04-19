@@ -30,3 +30,20 @@ test("CLI reports success for a valid Hub tree", async () => {
 
   assert.match(stdout, /Hub validation passed/);
 });
+
+test("validates Hub growth protocol objects", async () => {
+  const result = await validateHub(new URL("./fixtures/valid-growth-hub/", import.meta.url));
+  assert.deepEqual(result.errors, []);
+});
+
+test("reports invalid growth proposal schema errors", async () => {
+  const result = await validateHub(new URL("./fixtures/invalid-growth-proposal/", import.meta.url));
+  assert.match(result.errors.join("\n"), /proposals\/broken-proposal.yaml/);
+  assert.match(result.errors.join("\n"), /must have required property 'risk'/);
+});
+
+test("reports invalid layout patch schema errors", async () => {
+  const result = await validateHub(new URL("./fixtures/invalid-layout-patch/", import.meta.url));
+  assert.match(result.errors.join("\n"), /patches\/broken-patch.yaml/);
+  assert.match(result.errors.join("\n"), /must have required property 'rollback'/);
+});

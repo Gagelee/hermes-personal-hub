@@ -20,7 +20,11 @@ async function buildValidators() {
     manifest: ajv.compile(await readSchema("hub.manifest.schema.json")),
     page: ajv.compile(await readSchema("page.schema.json")),
     component: ajv.compile(await readSchema("component.schema.json")),
-    change: ajv.compile(await readSchema("change.schema.json"))
+    change: ajv.compile(await readSchema("change.schema.json")),
+    growthSignal: ajv.compile(await readSchema("growth-signal.schema.json")),
+    proposal: ajv.compile(await readSchema("growth-proposal.schema.json")),
+    patch: ajv.compile(await readSchema("layout-patch.schema.json")),
+    undoRecord: ajv.compile(await readSchema("undo-record.schema.json"))
   };
 }
 
@@ -94,6 +98,30 @@ async function validateSchemas(hub) {
   for (const change of hub.changes) {
     if (!validators.change(change.data)) {
       errors.push(...formatSchemaErrors(change.path, validators.change));
+    }
+  }
+
+  for (const signal of hub.growthSignals) {
+    if (!validators.growthSignal(signal.data)) {
+      errors.push(...formatSchemaErrors(signal.path, validators.growthSignal));
+    }
+  }
+
+  for (const proposal of hub.proposals) {
+    if (!validators.proposal(proposal.data)) {
+      errors.push(...formatSchemaErrors(proposal.path, validators.proposal));
+    }
+  }
+
+  for (const patch of hub.patches) {
+    if (!validators.patch(patch.data)) {
+      errors.push(...formatSchemaErrors(patch.path, validators.patch));
+    }
+  }
+
+  for (const undoRecord of hub.undoRecords) {
+    if (!validators.undoRecord(undoRecord.data)) {
+      errors.push(...formatSchemaErrors(undoRecord.path, validators.undoRecord));
     }
   }
 

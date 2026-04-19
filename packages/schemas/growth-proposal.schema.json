@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/hermes-personal-hub/growth-proposal.schema.json",
+  "title": "Personal Hub Growth Proposal",
+  "type": "object",
+  "required": ["id", "kind", "title", "created_at", "reason", "expected_value", "risk", "recommended_action", "requires_confirmation"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "kind": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "source_signal": { "type": "string" },
+    "reason": { "type": "string", "minLength": 1 },
+    "expected_value": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "risk": {
+      "type": "object",
+      "required": ["level", "reasons"],
+      "additionalProperties": true,
+      "properties": {
+        "level": { "type": "integer", "minimum": 0 },
+        "reasons": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "recommended_action": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": true,
+      "properties": {
+        "type": { "type": "string", "minLength": 1 },
+        "level": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "requires_confirmation": { "type": "boolean" }
+  }
+}

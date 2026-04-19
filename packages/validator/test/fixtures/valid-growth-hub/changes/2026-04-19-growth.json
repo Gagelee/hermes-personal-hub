@@ -1,0 +1,14 @@
+{
+  "id": "2026-04-19-growth",
+  "trigger": "test",
+  "reason": "Fixture change.",
+  "risk_level": 1,
+  "changes": [
+    {
+      "path": "growth/signal.yaml",
+      "action": "created",
+      "summary": "Created growth fixture."
+    }
+  ],
+  "growth_log": true
+}

@@ -20,6 +20,7 @@ This repository currently contains the initial design specification:
 - [Example CSS Primitives](examples/personal-hub/primitives.css)
 - [Public Demo Hub Manifest](examples/personal-hub/hub.manifest.yaml)
 - [Static Public Demo](examples/personal-hub/index.html)
+- [Demo Growth Signal](examples/personal-hub/growth/demo-growth-protocol-signal.yaml)
 
 The specs currently cover product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, growth protocol, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
 

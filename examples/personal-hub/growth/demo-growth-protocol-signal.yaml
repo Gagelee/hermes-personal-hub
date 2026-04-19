@@ -1,0 +1,15 @@
+id: demo-growth-protocol-signal
+kind: repeated_project_focus
+source:
+  type: public_design_review
+  refs:
+    - docs/specs/2026-04-19-growth-protocol.md
+observed_at: "2026-04-19T00:00:00+08:00"
+summary: "The project shifted priority from visual demo polish back to the self-iterating homepage protocol."
+evidence:
+  - "The demo renderer proved the pipeline but exposed that protocol semantics should drive UI composition."
+  - "The next stable workstream is Hub State Contract v2."
+candidate_world: hermes-personal-hub
+suggested_track: functional_growth
+confidence: 0.88
+privacy: public_demo

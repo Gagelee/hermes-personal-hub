@@ -1,0 +1,8 @@
+schema_version: 1
+hub_id: invalid-growth-proposal
+home:
+  layout_policy: test
+  sections: []
+pages: []
+control:
+  growth_log_enabled: true

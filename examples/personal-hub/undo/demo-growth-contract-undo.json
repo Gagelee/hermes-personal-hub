@@ -1,0 +1,13 @@
+{
+  "id": "demo-growth-contract-undo",
+  "created_at": "2026-04-19T00:00:00+08:00",
+  "change_id": "2026-04-18-demo-snapshot-created",
+  "patch_id": "demo-add-growth-contract",
+  "reason": "Demo undo record for growth contract changes.",
+  "operations": [
+    {
+      "op": "remove_change_record",
+      "file": "changes/2026-04-19-growth-contract.json"
+    }
+  ]
+}

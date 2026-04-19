@@ -1,0 +1,14 @@
+id: signal-growth-protocol
+kind: repeated_project_focus
+source:
+  type: session_cluster
+  refs:
+    - demo-session
+observed_at: "2026-04-19T00:00:00+08:00"
+summary: "The user prioritized the self-iterating homepage protocol over demo polish."
+evidence:
+  - "User redirected from visual demo polish to the core iteration framework."
+candidate_world: hermes-personal-hub
+suggested_track: functional_growth
+confidence: 0.91
+privacy: private
