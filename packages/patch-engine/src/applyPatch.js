@@ -70,6 +70,7 @@ async function createChangeRecord(root, patch, operation) {
     reason: `Applied layout patch ${patch.id}.`,
     risk_level: patch.risk_level,
     changes: (patch.operations ?? []).map(changeSummary),
+    rollback: patch.rollback ?? { strategy: "none", operations: [] },
     public_commit: false,
     growth_log: true
   };

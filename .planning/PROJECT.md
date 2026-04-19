@@ -21,16 +21,13 @@ Make growth visible and reversible — every automatic change must be inspectabl
 - ✓ Patch apply engine for low-risk patches with change record creation — Phase 3
 - ✓ Supports `add_component` and `create_change_record` operations — Phase 3
 - ✓ Change records track rollback operations for future undo — Phase 3
-
-### Active
-
-- [ ] **UNDO-01**: Load change record and verify pre-undo conditions — Verify patch exists, files match expected state, no concurrent modifications
-- [ ] **UNDO-02**: Validate layout policy protection before allowing undo — Protected/pinned items cannot be undone without explicit confirmation
-- [ ] **UNDO-03**: Dry-run undo preview — Show what operations will run, report risks, no files changed
-- [ ] **UNDO-04**: Execute rollback operations from change record — Move created files to archive instead of deleting immediately
-- [ ] **UNDO-05**: Post-undo validation — Validate hub is still valid after all operations
-- [ ] **UNDO-06**: Write undo record to changes directory for auditability
-- [ ] **UNDO-07**: CLI entry point for undo command — Accept hub path and change record ID
+- ✓ UNDO-01: Load change record and verify pre-undo conditions — Phase 4
+- ✓ UNDO-02: Validate layout policy protection before allowing undo — Phase 4
+- ✓ UNDO-03: Dry-run undo preview — Phase 4
+- ✓ UNDO-04: Execute rollback operations from change record — Phase 4
+- ✓ UNDO-05: Post-undo validation — Phase 4
+- ✓ UNDO-06: Write undo record to changes directory for auditability — Phase 4
+- ✓ UNDO-07: CLI entry point for undo command — Phase 4
 
 ### Out of Scope
 
@@ -64,10 +61,10 @@ The patch engine already captures rollback operations in every change record. Un
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Build undo within existing patch-engine package | Undo is intrinsically coupled to patching, doesn't need separate package | — Pending |
-| Execute pre-declared rollback operations from patch | Patches already declare their own inverse operations, no inference needed | — Pending |
-| Archive instead of immediate delete | Preserves recovery option while keeping working tree clean | — Pending |
-| Validate before AND after undo | Guarantees hub remains valid, catches any issues early | — Pending |
+| Build undo within existing patch-engine package | Undo is intrinsically coupled to patching, doesn't need separate package | ✓ Implemented |
+| Execute pre-declared rollback operations from patch | Patches already declare their own inverse operations, no inference needed | ✓ Implemented |
+| Archive instead of immediate delete | Preserves recovery option while keeping working tree clean | ✓ Implemented |
+| Validate before AND after undo | Guarantees hub remains valid, catches any issues early | ✓ Implemented |
 
 ## Evolution
 
@@ -87,4 +84,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-19 after project initialization*
+*Last updated: 2026-04-19 after Phase 4 complete - v1.0 milestone*

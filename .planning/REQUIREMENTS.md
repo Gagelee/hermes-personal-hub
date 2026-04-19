@@ -9,20 +9,20 @@ Requirements for Phase 4 (Undo Engine v0). All table stakes per research.
 
 ### Loading & Validation
 
-- [ ] **UNDO-01**: Undo engine can load an existing change record from the changes directory
-- [ ] **UNDO-02**: Pre-undo validation verifies file state matches expected state from change record (detects concurrent modifications)
-- [ ] **UNDO-03**: Layout policy check verifies no protected/pinned components are being removed without explicit confirmation
+- [x] **UNDO-01**: Undo engine can load an existing change record from the changes directory
+- [x] **UNDO-02**: Pre-undo validation verifies file state matches expected state from change record (detects concurrent modifications)
+- [x] **UNDO-03**: Layout policy check verifies no protected/pinned components are being removed without explicit confirmation
 
 ### Preview & Execution
 
-- [ ] **UNDO-04**: Dry-run undo previews all rollback operations without modifying any files
-- [ ] **UNDO-05**: Execute rollback operations moves created files to archive instead of deleting immediately
-- [ ] **UNDO-06**: Post-undo validation validates the entire hub after undo completes to ensure it remains valid
+- [x] **UNDO-04**: Dry-run undo previews all rollback operations without modifying any files
+- [x] **UNDO-05**: Execute rollback operations moves created files to archive instead of deleting immediately
+- [x] **UNDO-06**: Post-undo validation validates the entire hub after undo completes to ensure it remains valid
 
 ### Audit & CLI
 
-- [ ] **UNDO-07**: Undo record is written to the changes/undo directory for full auditability
-- [ ] **UNDO-08**: CLI entry point accepts hub root path and change record ID, outputs human-readable results
+- [x] **UNDO-07**: Undo record is written to the changes/undo directory for full auditability
+- [x] **UNDO-08**: CLI entry point accepts hub root path and change record ID, outputs human-readable results
 
 ## v2 Requirements
 
@@ -53,14 +53,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| UNDO-01 | Phase 4 | Pending |
-| UNDO-02 | Phase 4 | Pending |
-| UNDO-03 | Phase 4 | Pending |
-| UNDO-04 | Phase 4 | Pending |
-| UNDO-05 | Phase 4 | Pending |
-| UNDO-06 | Phase 4 | Pending |
-| UNDO-07 | Phase 4 | Pending |
-| UNDO-08 | Phase 4 | Pending |
+| UNDO-01 | Phase 4 | Done |
+| UNDO-02 | Phase 4 | Done |
+| UNDO-03 | Phase 4 | Done |
+| UNDO-04 | Phase 4 | Done |
+| UNDO-05 | Phase 4 | Done |
+| UNDO-06 | Phase 4 | Done |
+| UNDO-07 | Phase 4 | Done |
+| UNDO-08 | Phase 4 | Done |
 
 **Coverage:**
 - v1 requirements: 8 total
@@ -69,4 +69,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-19*
-*Last updated: 2026-04-19 after roadmap creation*
+*Last updated: 2026-04-19 after Phase 4 implementation*
