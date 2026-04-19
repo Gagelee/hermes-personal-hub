@@ -1,0 +1,14 @@
+id: existing-card
+type: summary
+status: adaptive
+title: Existing Card
+source:
+  kind: test
+data:
+  file: data/summaries/existing.json
+placement:
+  preferred_surface: home
+  semantic_zone: now
+explanation:
+  why_here: "Provides a stable starting card."
+  user_value: "Keeps the fixture valid before applying a patch."

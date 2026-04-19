@@ -18,6 +18,8 @@ async function readPatch(hubRoot, patchPath) {
   return YAML.parse(content);
 }
 
+export { readPatch };
+
 function componentIds(hub) {
   return new Set(hub.components.map((component) => component.data?.id).filter(Boolean));
 }
@@ -61,7 +63,7 @@ async function describeOperation(operation, hub, context) {
         file: operation.file,
         result: exists ? "already_exists" : "would_create"
       },
-      errors: []
+      errors: exists ? [`change record already exists: ${operation.file}`] : []
     };
   }
 
