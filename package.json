@@ -7,7 +7,8 @@
     "test": "node --test packages/*/test/*.test.js",
     "validate:demo": "node packages/validator/src/cli.js examples/personal-hub",
     "validate:private": "node packages/validator/src/cli.js .local/personal-hub",
-    "render:demo": "node packages/renderer/src/cli.js examples/personal-hub examples/personal-hub/index.html"
+    "render:demo": "node packages/renderer/src/cli.js examples/personal-hub examples/personal-hub/index.html",
+    "dry-run:demo": "node packages/patch-engine/src/cli.js examples/personal-hub patches/demo-add-growth-contract.yaml"
   },
   "dependencies": {
     "ajv": "^8.17.1",
