@@ -18,6 +18,7 @@ This repository currently contains the initial design specification:
 - [Example CSS Tokens](examples/personal-hub/tokens.css)
 - [Example CSS Primitives](examples/personal-hub/primitives.css)
 - [Public Demo Hub Manifest](examples/personal-hub/hub.manifest.yaml)
+- [Static Public Demo](examples/personal-hub/index.html)
 
 The spec currently covers product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
 
@@ -60,6 +61,12 @@ npm run validate:private
 ```
 
 Public demo Hubs should pass the same validator before commit.
+
+Render the static public demo:
+
+```bash
+npm run render:demo
+```
 
 ## Planned Repo Shape
 
