@@ -1,0 +1,10 @@
+id: growth
+title: Growth
+status: adaptive
+semantic_zone: growth
+components:
+  - growth-protocol-card
+data_sources:
+  - data/summaries/growth.json
+auto_layout:
+  allowed: true

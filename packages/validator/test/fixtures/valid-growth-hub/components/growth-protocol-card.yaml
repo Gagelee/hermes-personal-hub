@@ -1,0 +1,14 @@
+id: growth-protocol-card
+type: growth_signal
+status: adaptive
+title: Growth Protocol
+source:
+  kind: test
+data:
+  file: data/summaries/growth.json
+placement:
+  preferred_surface: home
+  semantic_zone: growth
+explanation:
+  why_here: "The validator should accept growth protocol state."
+  user_value: "Shows that growth objects can be validated."

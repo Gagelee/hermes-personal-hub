@@ -1,0 +1,13 @@
+{
+  "id": "undo-growth",
+  "created_at": "2026-04-19T00:00:00+08:00",
+  "change_id": "2026-04-19-growth",
+  "patch_id": "patch-add-growth-component",
+  "reason": "Test undo record.",
+  "operations": [
+    {
+      "op": "remove_component",
+      "component_id": "growth-protocol-card"
+    }
+  ]
+}

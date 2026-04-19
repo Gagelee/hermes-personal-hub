@@ -1,0 +1,20 @@
+id: demo-growth-contract-proposal
+kind: interactive_surface_candidate
+title: Hub State Contract v2
+created_at: "2026-04-19T00:00:00+08:00"
+source_signal: demo-growth-protocol-signal
+reason: "The Hub needs machine-verifiable growth objects before UI composition can represent self-iteration."
+expected_value:
+  felt_growth: "Makes protocol progress visible as an active system capability."
+  interaction_upgrade: "Prepares future proposal review and patch dry-run surfaces."
+risk:
+  level: 1
+  reasons:
+    - "Public schema and fixture work only."
+recommended_action:
+  type: add_growth_object_schemas
+  level: 1
+alternatives:
+  - continue_visual_demo_polish
+  - keep_protocol_as_documentation_only
+requires_confirmation: false

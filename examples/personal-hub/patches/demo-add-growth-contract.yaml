@@ -1,0 +1,17 @@
+id: demo-add-growth-contract
+created_at: "2026-04-19T00:00:00+08:00"
+risk_level: 1
+operations:
+  - op: add_component
+    component_id: demo-agent-growth-log
+    target:
+      surface: home
+      section: operations
+      position: existing
+  - op: create_change_record
+    file: changes/2026-04-19-growth-contract.json
+rollback:
+  strategy: inverse_patch
+  operations:
+    - op: remove_change_record
+      file: changes/2026-04-19-growth-contract.json

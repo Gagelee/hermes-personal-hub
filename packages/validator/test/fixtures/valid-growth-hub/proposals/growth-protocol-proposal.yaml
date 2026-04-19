@@ -1,0 +1,19 @@
+id: proposal-growth-protocol
+kind: interactive_surface_candidate
+title: Growth Protocol Surface
+created_at: "2026-04-19T00:00:00+08:00"
+source_signal: signal-growth-protocol
+reason: "The protocol should become an active Hub workstream."
+expected_value:
+  felt_growth: "Makes protocol progress visible."
+  interaction_upgrade: "Prepares review surfaces for future proposals."
+risk:
+  level: 1
+  reasons:
+    - "Documentation and schema work only."
+recommended_action:
+  type: create_candidate_component
+  level: 1
+alternatives:
+  - keep_as_spec_only
+requires_confirmation: false

@@ -1,0 +1,19 @@
+schema_version: 1
+hub_id: valid-growth-hub
+status: demo
+home:
+  layout_policy: test
+  sections:
+    - id: now
+      label: Now
+      mode: adaptive
+      components:
+        - growth-protocol-card
+pages:
+  - id: growth
+    title: Growth
+    file: pages/growth.yaml
+    status: adaptive
+control:
+  growth_log_enabled: true
+  undo_enabled: true

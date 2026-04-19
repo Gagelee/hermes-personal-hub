@@ -1,0 +1,10 @@
+id: broken-proposal
+kind: interactive_surface_candidate
+title: Broken Proposal
+created_at: "2026-04-19T00:00:00+08:00"
+reason: "Missing risk."
+expected_value:
+  felt_growth: "Visible progress."
+recommended_action:
+  type: create_candidate_component
+requires_confirmation: true
