@@ -1,0 +1,18 @@
+schema_version: 1
+hub_id: apply-add-component
+status: demo
+updated_at: "2026-04-19T00:00:00+08:00"
+
+home:
+  layout_policy: test
+  sections:
+    - id: now
+      label: Now
+      mode: adaptive
+      components:
+        - existing-card
+
+pages: []
+control:
+  growth_log_enabled: true
+  undo_enabled: true

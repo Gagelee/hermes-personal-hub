@@ -1,0 +1,14 @@
+id: focus-card
+type: summary
+status: adaptive
+title: Focus Card
+source:
+  kind: test
+data:
+  file: data/summaries/focus.json
+placement:
+  preferred_surface: home
+  semantic_zone: now
+explanation:
+  why_here: "Tests patch application."
+  user_value: "Shows that a proposed card can be safely added."
