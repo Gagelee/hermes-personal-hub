@@ -1,0 +1,14 @@
+schema_version: 1
+hub_id: invalid-dry-run
+status: demo
+updated_at: "2026-04-19T00:00:00+08:00"
+
+home:
+  layout_policy: test
+  sections:
+    - id: operations
+      label: Operations
+      mode: adaptive
+      components: []
+
+pages: []
