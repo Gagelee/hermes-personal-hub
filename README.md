@@ -9,6 +9,7 @@ The core idea: if an agent can learn from a user over time, its interface should
 This repository currently contains the initial design specification:
 
 - [Hermes Personal Hub Design](docs/specs/2026-04-17-hermes-personal-hub-design.md)
+- [Growth Protocol](docs/specs/2026-04-19-growth-protocol.md)
 - [Visual Reference Notes](docs/design/visual-reference-notes.md)
 - [Visual Policy](docs/design/VISUAL_POLICY.md)
 - [Machine-Readable Visual Policy](docs/design/visual.policy.yaml)
@@ -20,7 +21,7 @@ This repository currently contains the initial design specification:
 - [Public Demo Hub Manifest](examples/personal-hub/hub.manifest.yaml)
 - [Static Public Demo](examples/personal-hub/index.html)
 
-The spec currently covers product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
+The specs currently cover product positioning, user value, dashboard plugin boundaries, growth tracks, adaptive trust policy, growth protocol, manifest structure, component model, agent generation loop, visual policy, MVP scope, and Host Plugin runtime architecture.
 
 The repository also includes a sanitized public demo Hub under `examples/personal-hub/`.
 
